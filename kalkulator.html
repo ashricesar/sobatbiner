@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Kalkulator Biner Interaktif — Sobat Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+  </head>
+  <body class="calculator-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+        >
+          <span class="brand-icon">🤖</span><span>Sobat Biner</span>
+        </a>
+        <div class="header-actions">
+          <a
+            class="calculator-link calculator-link-active"
+            href="kalkulator.html"
+            aria-current="page"
+            ><i data-lucide="calculator"></i> Kalkulator</a
+          >
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="calculator-container">
+      <a class="calculator-back" href="index.html">← &nbsp;Beranda</a>
+      <h1 class="calculator-title">🧮 Kalkulator Biner Interaktif</h1>
+
+      <div class="calculator-grid">
+        <section class="calculator-card" aria-labelledby="decimal-title">
+          <h2 id="decimal-title">Desimal → Biner</h2>
+          <form class="calculator-form" id="decimal-form" novalidate>
+            <label class="visually-hidden" for="calc-dec-input"
+              >Masukkan bilangan desimal dari 0 sampai 255</label
+            >
+            <input
+              id="calc-dec-input"
+              type="number"
+              min="0"
+              max="255"
+              step="1"
+              inputmode="numeric"
+              placeholder="-"
+            />
+            <button type="submit">Konversikan</button>
+          </form>
+          <div
+            class="calculator-steps decimal-steps"
+            id="calc-dec-steps"
+            aria-live="polite"
+            aria-label="Langkah konversi desimal ke biner"
+          ></div>
+        </section>
+
+        <section class="calculator-card" aria-labelledby="binary-title">
+          <h2 id="binary-title">Biner → Desimal</h2>
+          <form class="calculator-form" id="binary-form" novalidate>
+            <label class="visually-hidden" for="calc-bin-input"
+              >Masukkan bilangan biner</label
+            >
+            <input
+              id="calc-bin-input"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="-"
+            />
+            <button type="submit">Konversikan</button>
+          </form>
+          <div
+            class="calculator-steps binary-steps"
+            id="calc-bin-steps"
+            aria-live="polite"
+            aria-label="Langkah konversi biner ke desimal"
+          ></div>
+        </section>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>

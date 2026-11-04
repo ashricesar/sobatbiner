@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Unit 6 — Uji Pemahaman | Sobat Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/unit6-page.js" defer></script>
+  </head>
+  <body class="unit6-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+          ><span class="brand-icon">🤖</span><span>Sobat Biner</span></a
+        >
+        <div class="header-actions">
+          <a class="calculator-link" href="kalkulator.html">
+            <i data-lucide="calculator" aria-hidden="true"></i>
+            Kalkulator
+          </a>
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="unit6-container unit-container">
+      <a class="unit6-back" href="index.html">← &nbsp;Beranda</a>
+      <h1 class="unit6-title">🏆 Uji Pemahaman Kamu</h1>
+
+      <section
+        class="unit6-progress"
+        id="quizProgressArea"
+        aria-label="Progres pengerjaan kuis"
+      >
+        <div class="unit6-progress-track">
+          <span id="quizProgressBar"></span>
+        </div>
+        <span id="quizProgressText">0/5</span>
+      </section>
+
+      <section class="unit6-card" id="questionCard" aria-live="polite">
+        <div class="unit6-timer" id="timer">00:00</div>
+        <div id="questionArea"></div>
+        <p class="unit6-validation" id="validationMessage" role="alert"></p>
+        <button class="unit6-confirm" id="confirmButton" type="button">
+          Konfirmasi →
+        </button>
+      </section>
+
+      <section
+        class="unit6-result-card hidden"
+        id="resultCard"
+        aria-live="polite"
+      >
+        <div class="unit6-finish-icon">🎉</div>
+        <h2>Tantangan Selesai!</h2>
+        <p class="unit6-score-label">Skor kamu</p>
+        <p class="unit6-score" id="scoreText">0/5</p>
+        <p class="unit6-duration" id="durationText">
+          Lama pengerjaan 00 menit 00 detik
+        </p>
+        <p class="unit6-appreciation" id="appreciationText">
+          Tetap semangat belajar!
+        </p>
+        <button class="unit6-retry" id="retryButton" type="button">
+          ↻ Ulangi Soal
+        </button>
+        <h3 class="unit6-result-heading">Hasil Jawaban Kamu</h3>
+        <div class="unit6-answer-results" id="answerResults"></div>
+      </section>
+    </main>
+
+    <div
+      class="unit6-modal hidden"
+      id="startModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="startModalTitle"
+    >
+      <div class="reset-modal-dialog">
+        <div class="reset-modal-icon">
+          <i data-lucide="alert-circle" aria-hidden="true"></i>
+        </div>
+
+        <h2 id="startModalTitle">Perhatian!</h2>
+
+        <p>
+          Selama pembelajaran berlangsung, jangan membuka aplikasi lain, ya.
+        </p>
+
+        <p>Apabila terdeteksi, soal dan progres Unit 6 akan diperbarui.</p>
+
+        <div class="reset-modal-actions">
+          <button class="reset-confirm-button" id="startButton" type="button">
+            Mulai
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="unit6-modal hidden"
+      id="violationModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="violationModalTitle"
+    >
+      <div class="reset-modal-dialog">
+        <div class="reset-modal-icon">
+          <i data-lucide="alert-circle" aria-hidden="true"></i>
+        </div>
+
+        <h2 id="violationModalTitle">Perhatian!</h2>
+
+        <p>
+          Kamu terdeteksi melakukan pelanggaran, soal dan progres belajar kamu
+          akan diperbarui.
+        </p>
+
+        <div class="reset-modal-actions">
+          <button
+            class="reset-confirm-button"
+            id="violationOkButton"
+            type="button"
+          >
+            Ok
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>

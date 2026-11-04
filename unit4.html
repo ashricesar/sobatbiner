@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Unit 4 — Konversi Desimal ke Biner | Sobat Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/unit4-page.js" defer></script>
+  </head>
+  <body class="unit4-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+          ><span class="brand-icon">🤖</span><span>Sobat Biner</span></a
+        >
+        <div class="header-actions">
+          <a class="calculator-link" href="kalkulator.html">
+            <i data-lucide="calculator" aria-hidden="true"></i>
+            Kalkulator
+          </a>
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="unit4-container unit-container">
+      <a class="unit4-back" href="index.html">← &nbsp;Beranda</a>
+      <h1 class="unit4-title">🔄 Konversi Bilangan Desimal ke Biner</h1>
+
+      <section
+        class="unit4-workspace"
+        aria-label="Aktivitas konversi desimal ke biner"
+      >
+        <div class="unit4-video-frame">
+          <iframe
+            src="https://www.canva.com/design/DAHYQnmpu6I/C4VKElX271raWdCy0i1ufg/watch?embed"
+            title="Video Unit 4: Konversi Bilangan Desimal ke Biner"
+            loading="lazy"
+            allowfullscreen
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+
+        <div class="unit4-input-section">
+          <label for="decimalInput">Masukkan bilangan desimal</label>
+          <input
+            type="number"
+            id="decimalInput"
+            min="0"
+            max="255"
+            step="1"
+            placeholder="-"
+            inputmode="numeric"
+          />
+          <button class="unit4-convert-button" id="convertButton" type="button">
+            Konversi! ✨
+          </button>
+          <p class="unit4-input-hint">
+            Masukkan bilangan bulat dari 0 sampai 255.
+          </p>
+        </div>
+
+        <section class="unit4-bits-section" aria-labelledby="bits-title">
+          <h2 id="bits-title">Nilai tempat bilangan biner</h2>
+          <div class="unit4-bits" id="bits" aria-live="polite"></div>
+        </section>
+      </section>
+
+      <section class="unit4-result hidden" id="result" aria-live="polite">
+        <p class="unit4-result-label">Bilangan desimal</p>
+        <p class="unit4-decimal-result" id="decimalResult">-</p>
+        <p class="unit4-equals">dikonversi menjadi biner</p>
+        <p class="unit4-binary-result" id="binaryResult">-</p>
+      </section>
+
+      <section
+        class="unit4-explanation hidden"
+        id="explanation"
+        aria-labelledby="explanation-title"
+      >
+        <h2 id="explanation-title">🔎 Bagaimana cara mendapatkannya?</h2>
+        <p class="unit4-explanation-intro">
+          Untuk mengubah bilangan desimal menjadi biner, bilangan tersebut
+          dibagi dengan 2 secara berulang. Setiap pembagian menghasilkan sisa
+          berupa 0 atau 1.
+        </p>
+
+        <div
+          class="unit4-division-steps"
+          id="divisionSteps"
+          aria-label="Langkah pembagian berulang"
+        ></div>
+
+        <div class="unit4-remainder-explanation">
+          Sisa pertama merupakan angka paling kanan. Karena itu, sisa perlu
+          dibaca
+          <strong>dari bawah ke atas.</strong>
+        </div>
+
+        <div class="unit4-final-answer">
+          <p>Jadi, hasil konversinya adalah</p>
+          <div class="unit4-final-binary" id="finalBinary">-</div>
+        </div>
+
+        <div class="unit4-why-section">
+          💡 <strong>Kenapa dibagi 2?</strong>
+          <p>
+            Karena bilangan yang ingin kita bentuk adalah bilangan biner, dan
+            biner menggunakan basis 2. Sisa pembagian dengan 2 hanya mungkin
+            berupa <strong>0 atau 1</strong>, sehingga sisa tersebut dapat
+            menjadi angka-angka penyusun bilangan biner.
+          </p>
+        </div>
+      </section>
+
+      <section class="expression-section">
+        <p class="expression-title">Ayo beri ekspresimu!</p>
+
+        <div class="expression-options">
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Wah, ternyata banyak hal baru yang kamu pelajari!"
+          >
+            😲
+          </button>
+
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Keren! Kamu semakin memahami materi biner!"
+          >
+            🤓
+          </button>
+
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Senang sekali kamu menikmati proses belajarnya!"
+          >
+            🥰
+          </button>
+        </div>
+
+        <p class="expression-message" aria-live="polite"></p>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+    <script src="js/expression.js"></script>
+  </body>
+</html>

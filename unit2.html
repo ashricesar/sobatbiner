@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Unit 2 — Mengenal Sistem Bilangan Desimal | Sobat Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/unit2-page.js" defer></script>
+  </head>
+  <body class="unit2-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+          ><span class="brand-icon">🤖</span><span>Sobat Biner</span></a
+        >
+        <div class="header-actions">
+          <a class="calculator-link" href="kalkulator.html">
+            <i data-lucide="calculator" aria-hidden="true"></i>
+            Kalkulator
+          </a>
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="unit2-container unit-container">
+      <a class="unit2-back" href="index.html">← &nbsp;Beranda</a>
+      <h1 class="unit2-title">💡 Mengenal Sistem Bilangan Desimal</h1>
+
+      <section class="unit2-card" aria-labelledby="unit2-question">
+        <div class="unit2-video-frame">
+          <iframe
+            src="https://www.canva.com/design/DAHXrAhHUyc/hdEbFqkpCha8M8T2NXnuMQ/watch?embed"
+            title="Video Unit 2: Mengenal Sistem Bilangan Desimal"
+            loading="lazy"
+            allowfullscreen
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+
+        <div class="unit2-quiz">
+          <h2 id="unit2-question">Jadi, mana jawaban ini yang tepat?</h2>
+          <div
+            class="unit2-options"
+            role="group"
+            aria-labelledby="unit2-question"
+          >
+            <button class="unit2-option" type="button" data-answer="wrong">
+              Aturan penulisan bilangan yang menggunakan 2 digit, yaitu 0 dan 1,
+              dengan nilai tempat berbasis dua
+            </button>
+            <button class="unit2-option" type="button" data-answer="correct">
+              Aturan penulisan bilangan yang menggunakan 10 digit, yaitu 0
+              sampai 9, dengan nilai tempat berbasis sepuluh
+            </button>
+            <button class="unit2-option" type="button" data-answer="wrong">
+              Hasil dari perpangkatan yang akan menentukan nilai pengali untuk
+              setiap digit
+            </button>
+            <button class="unit2-option" type="button" data-answer="wrong">
+              Penulisan pangkat basisnya mengikuti posisi digitnya, digit paling
+              kanan menempati posisi 0, berurutan hingga posisi paling kiri
+            </button>
+          </div>
+          <p
+            class="unit2-feedback"
+            id="unit2-feedback"
+            role="status"
+            aria-live="polite"
+            hidden
+          ></p>
+        </div>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>

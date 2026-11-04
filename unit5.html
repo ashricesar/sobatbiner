@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Unit 5 — Konversi Biner ke Desimal | Sobat Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/unit5-page.js" defer></script>
+  </head>
+  <body class="unit5-page">
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+          ><span class="brand-icon">🤖</span><span>Sobat Biner</span></a
+        >
+        <div class="header-actions">
+          <a class="calculator-link" href="kalkulator.html">
+            <i data-lucide="calculator" aria-hidden="true"></i>
+            Kalkulator
+          </a>
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="unit5-container unit-container">
+      <a class="unit5-back" href="index.html">← &nbsp;Beranda</a>
+      <h1 class="unit5-title">🔄 Konversi Bilangan Biner ke Desimal</h1>
+
+      <section
+        class="unit5-workspace"
+        aria-label="Aktivitas nilai tempat bilangan biner"
+      >
+        <div class="unit5-video-frame">
+          <iframe
+            src="https://www.canva.com/design/DAHYVnMNCAY/17YyIRxFeV9FhXCnJRXyFg/watch?embed"
+            title="Video Unit 5: Konversi Bilangan Biner ke Desimal"
+            loading="lazy"
+            allowfullscreen
+            allow="fullscreen"
+          >
+          </iframe>
+        </div>
+
+        <h2 class="unit5-game-title">Yuk, Mainkan Angka Binernya! 🎮</h2>
+        <p class="unit5-subtitle">
+          Klik angka 0 untuk mengubahnya menjadi 1. Lihat bagaimana setiap
+          posisi biner memiliki nilai yang berbeda.
+        </p>
+
+        <h2 class="unit5-binary-title">Nilai tempat bilangan biner</h2>
+        <p class="unit5-instruction">
+          Tekan kotak angka untuk mengubah 0 menjadi 1. Klik lagi untuk
+          mengubahnya kembali menjadi 0.
+        </p>
+        <div class="unit5-bits" id="bits" aria-live="polite"></div>
+      </section>
+
+      <section class="unit5-result hidden" id="result" aria-live="polite">
+        <p class="unit5-result-label">Bilangan biner</p>
+        <p class="unit5-binary-result" id="binaryResult">-</p>
+        <p class="unit5-equals">sama dengan desimal</p>
+        <p class="unit5-decimal-result" id="decimalResult">-</p>
+      </section>
+
+      <section
+        class="unit5-explanation hidden"
+        id="explanation"
+        aria-labelledby="explanation-title"
+      >
+        <h2 id="explanation-title">🔎 Bagaimana cara mendapatkan hasilnya?</h2>
+        <p class="unit5-explanation-intro">
+          Setiap angka biner dikalikan dengan nilai tempatnya. Jika angkanya 1,
+          nilai tersebut ikut dijumlahkan. Jika angkanya 0, hasil perkaliannya
+          tetap 0.
+        </p>
+        <div
+          class="unit5-calculation-list"
+          id="calculationList"
+          aria-label="Langkah perhitungan"
+        ></div>
+        <div class="unit5-total">
+          <div class="unit5-total-equation" id="totalEquation">
+            0 + 0 + 0 + 0 + 0 + 0 + 0 + 0 = 0
+          </div>
+          <div class="unit5-total-result">
+            Jadi, hasilnya = <span id="totalResult">0</span>
+          </div>
+        </div>
+        <div class="unit5-tip">
+          💡 <strong>Ingat!</strong>
+          <p>
+            Dalam bilangan biner, setiap posisi memiliki nilai yang merupakan
+            pangkat 2. Semakin ke kiri, nilai tempatnya semakin besar.
+          </p>
+        </div>
+      </section>
+
+      <section class="expression-section">
+        <p class="expression-title">Ayo beri ekspresimu!</p>
+
+        <div class="expression-options">
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Wah, ternyata banyak hal baru yang kamu pelajari!"
+          >
+            😲
+          </button>
+
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Keren! Kamu semakin memahami materi biner!"
+          >
+            🤓
+          </button>
+
+          <button
+            type="button"
+            class="expression-option"
+            data-message="Senang sekali kamu menikmati proses belajarnya!"
+          >
+            🥰
+          </button>
+        </div>
+
+        <p class="expression-message" aria-live="polite"></p>
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+    <script src="js/expression.js"></script>
+  </body>
+</html>

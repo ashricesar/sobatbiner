@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e8f5fc" />
+    <title>Sobat Biner — Belajar Bilangan Biner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+    <script src="js/progress.js" defer></script>
+    <script src="js/effects.js" defer></script>
+    <script src="js/home.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Sobat Biner, halaman utama"
+        >
+          <span class="brand-icon">🤖</span><span>Sobat Biner</span>
+        </a>
+        <div class="header-actions">
+          <a class="calculator-link" href="kalkulator.html"
+            ><i data-lucide="calculator"></i> Kalkulator</a
+          >
+          <div class="mini-progress" aria-label="Progres belajar">
+            <div class="mini-progress-track">
+              <span id="nav-progress-bar"></span>
+            </div>
+            <span id="nav-progress-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="home-container">
+      <section class="hero-section">
+        <div class="hero-copy">
+          <h1>
+            Belajar Bilangan Biner Jadi Lebih Seru!
+            <span aria-hidden="true">🎮</span>
+          </h1>
+          <p>
+            Pelajari cara komputer berpikir menggunakan bilangan biner melalui
+            materi singkat, animasi interaktif, dan kuis seru yang dapat
+            diselesaikan hanya dalam beberapa menit.
+          </p>
+          <a class="primary-button" href="unit1.html"
+            >Mulai Belajar <span aria-hidden="true">→</span></a
+          >
+        </div>
+        <img
+          class="hero-image"
+          src="images/hero-sobatbiner.png"
+          alt="Ilustrasi siswa sedang belajar bilangan biner bersama robot"
+        />
+      </section>
+
+      <section class="progress-card" aria-labelledby="progress-heading">
+        <h2 id="progress-heading">📊 Progres Belajar Kamu</h2>
+        <div class="progress-row">
+          <div class="progress-track"><span id="home-progress-bar"></span></div>
+          <strong id="home-progress-text">0/6</strong>
+        </div>
+        <div class="progress-card-actions">
+          <button
+            class="reset-progress-button"
+            id="reset-progress-open"
+            type="button"
+          >
+            <i data-lucide="refresh-ccw" aria-hidden="true"></i>
+            <span>Ulangi Pembelajaran</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="reset-modal" id="reset-progress-modal" hidden>
+        <div class="reset-modal-backdrop" data-reset-close></div>
+        <section
+          class="reset-modal-dialog"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="reset-modal-title"
+          aria-describedby="reset-modal-description"
+          tabindex="-1"
+        >
+          <div class="reset-modal-icon" aria-hidden="true">
+            <i data-lucide="refresh-ccw"></i>
+          </div>
+          <h2 id="reset-modal-title">Ulangi Pembelajaran?</h2>
+          <p id="reset-modal-description">
+            Apakah kamu yakin ingin mengulang pembelajaran dari awal? Seluruh
+            progres belajar Unit 1–6 akan direset. Tindakan ini tidak dapat
+            dibatalkan.
+          </p>
+          <div class="reset-modal-actions">
+            <button
+              class="reset-cancel-button"
+              id="reset-progress-cancel"
+              type="button"
+            >
+              Batal
+            </button>
+            <button
+              class="reset-confirm-button"
+              id="reset-progress-confirm"
+              type="button"
+            >
+              Ya, Reset Progres
+            </button>
+          </div>
+        </section>
+      </div>
+
+      <section class="unit-grid" aria-label="Daftar unit pembelajaran">
+        <a class="unit-card" href="unit1.html">
+          <span class="unit-icon">💡</span>
+          <h2>Unit 1: Pentingnya Biner Bagi Komputer</h2>
+          <p>
+            Temukan apa itu sistem bilangan dan mengapa komputer menggunakan
+            bilangan biner.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 3 menit</span
+            ><span class="status" id="unit1-status">Belum selesai</span></span
+          >
+        </a>
+        <a class="unit-card" href="unit2.html">
+          <span class="unit-icon">🔢</span>
+          <h2>Unit 2: Mengenal Sistem Bilangan Desimal</h2>
+          <p>
+            Kenali sistem bilangan desimal dan sepuluh digit yang digunakan
+            dalam kehidupan sehari-hari.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 3 menit</span
+            ><span class="status" id="unit2-status">Belum selesai</span></span
+          >
+        </a>
+        <a class="unit-card" href="unit3.html">
+          <span class="unit-icon">🔟</span>
+          <h2>Unit 3: Mengenal Sistem Bilangan Biner</h2>
+          <p>
+            Pelajari pengertian bilangan biner dan bagaimana bilangan ini
+            tersusun dari angka 0 dan 1.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 3 menit</span
+            ><span class="status" id="unit3-status">Belum selesai</span></span
+          >
+        </a>
+        <a class="unit-card" href="unit4.html">
+          <span class="unit-icon">🔄</span>
+          <h2>Unit 4: Konversi Bilangan Desimal ke Biner</h2>
+          <p>
+            Pelajari langkah mengubah bilangan desimal menjadi bilangan biner
+            dengan pembagian berulang.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 3 menit</span
+            ><span class="status" id="unit4-status">Belum selesai</span></span
+          >
+        </a>
+        <a class="unit-card" href="unit5.html">
+          <span class="unit-icon">🔁</span>
+          <h2>Unit 5: Konversi Bilangan Biner ke Desimal</h2>
+          <p>
+            Pelajari cara mengubah bilangan biner menjadi desimal menggunakan
+            nilai tempat.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 3 menit</span
+            ><span class="status" id="unit5-status">Belum selesai</span></span
+          >
+        </a>
+        <a class="unit-card" href="unit6.html">
+          <span class="unit-icon">🏆</span>
+          <h2>Uji Pemahaman Kamu</h2>
+          <p>
+            Kerjakan kuis interaktif untuk mengukur pemahamanmu tentang sistem
+            bilangan biner dan desimal.
+          </p>
+          <span class="unit-meta"
+            ><span><i data-lucide="clock"></i> 5 menit</span
+            ><span class="status" id="unit6-status">Belum selesai</span></span
+          >
+        </a>
+      </section>
+
+      <section class="switch-section" aria-labelledby="switch-heading">
+        <h2 id="switch-heading">Coba nyalakan dan matikan lampunya!</h2>
+        <div class="switch-demo">
+          <div class="bulb-wrap" id="bulb-visual" aria-live="polite">💡</div>
+          <button class="switch-button" id="bulb-toggle" type="button">
+            Tombol Saklar
+          </button>
+        </div>
+        <p class="bulb-state" id="bulb-state">MATI = 0</p>
+      </section>
+
+      <aside class="notice-card" id="learning-notice">
+        <div>
+          <strong>Perhatian ‼️</strong>
+          <p>
+            Selama pembelajaran berlangsung, jangan membuka aplikasi lain, ya.
+          </p>
+          <p>Semangat belajar!</p>
+        </div>
+        <button type="button" id="notice-close">Ok</button>
+      </aside>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) lucide.createIcons();
+      });
+    </script>
+  </body>
+</html>
